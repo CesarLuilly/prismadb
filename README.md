@@ -112,7 +112,7 @@ Lee el archivo anterior, agrega algunos registros más, al correr el archivo est
 
 10. Corre el archivo anterior: `node prisma/seed.js`. Verifica que ahora tu tabla tenga algunos registros.
 
-![feeshipping1](https://user-images.githubusercontent.com/17634377/166177664-612477c5-11fc-4634-a631-c8eca368e5f7.gif)
+![insterData](./imgReadme/insertData.jpg)
 
 # Parte 2: CRUD 
 
@@ -140,6 +140,8 @@ app.listen(port, () => {
 
 2. Corre el server `node server.js` y accede a `localhost:3000`, verifica que recibas un mensaje.
 
+![responseServer](./imgReadme/responseServer.jpg)
+
 # API CRUD
 
 3. Agrega un nuevo endpoint GET en tu `server.js` que regrese todos los explorers. Prúebalo en la url: `localhost:3000/explorers`
@@ -150,6 +152,8 @@ app.get('/explorers', async (req, res) => {
   res.json(allExplorers);
 });
 ```
+
+![responseExplorers](./imgReadme/responseExplorers.jpg)
 
 4. Agrega un nuevo endpoint GET que te regrese el explorer al enviar un ID por query params. Prúebalo en la url: `localhost:3000/explorers/1`
 
