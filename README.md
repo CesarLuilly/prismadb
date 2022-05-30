@@ -23,6 +23,10 @@ npm install prisma --save-dev
 DATABASE_URL="postgresql://TUUSUARIO:PASSWORD@localhost:5432/explorers_api?schema=public"
 ```
 
+Quedara de la siguiente manera:
+
+![env](./imgReadme/env.jpg)
+
 Este archivo es el que hará posible la conexión a tu db, para ello necesitas haber creado la db `explorers_api` como en el minitutorial de db.
 
 7. Abre el archivo `prisma/schema.prisma` y agrega un nuevo modelo Explorer:
@@ -43,7 +47,7 @@ Esta es la forma de declarar una nueva tabla en nuestra db. Revisa la documentac
 
 8. Versiona el nuevo modelo como nuevo cambio en nuestra base de datos, al versionamiento de los cambios de db se les llama `migrations` (como si fueran commits de git). Para esto corre el siguiente comando: `npx prisma migrate dev --name init`. Al terminar de ejecutar este comando habrás creato tu primer tabla de SQL usando prisma. Revisa tu base de datos y comprueba que tu tabla este ahí. Además se creará una carpeta `prisma/migrations/` que contendrá un archivo SQL con el código en SQL de la tabla creada, este código es autogenerado para ti.
 
-![feeshipping1](https://user-images.githubusercontent.com/17634377/166177588-f056afb3-cd85-4022-a3f3-6de64481afe0.gif)
+![reviewDatabase](./imgReadme/reviewDatabase.jpg)
 
 9. Crea un archivo `prisma/seed.js`, aquí puedes crear datos para insertarlos de forma automatizada en tu db:
 
