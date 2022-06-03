@@ -164,6 +164,7 @@ app.get('/explorers/:id', async (req, res) => {
   res.json(explorer);
 });
 ```
+![getOne](./imgReadme/getOne.jpg)
 
 5. Crea un nuevo endpoint POST con el que vas a poder crear nuevos explorers. 
 
@@ -179,6 +180,7 @@ app.post('/explorers', async (req, res) => {
   return res.json({message});
 });
 ```
+![postAddExplorer](./imgReadme/postAddExplorer.jpg)
 
 6. Crea un nuevo endpoint PUT, en el cuál recibirás el ID del explorer a actualizar, y en el cuerpo del request los campos a actualizar, para este caso solo haremos el update del campo mission.
 
@@ -199,6 +201,9 @@ app.put('/explorers/:id', async (req, res) => {
 });
 ```
 
+![putExplorer](./imgReadme/putExplorer.jpg)
+![putExplorer](./imgReadme/getExplorer5.jpg)
+
 7. Crea un nuevo endpoint DELETE para eliminar un explorer dado un ID por query params.
 
 ```javascript
@@ -208,6 +213,8 @@ app.delete('/explorers/:id', async (req, res) => {
 	return res.json({message: "Eliminado correctamente"});
 });
 ```
+
+![deleteOneExplorer](./imgReadme/deleteOneExplorer.jpg)
 
 La url para tu API será `localhost:3000/explorers`. Aquí podrás acceder por GET, POST, PUT, y DELETE. 
 
