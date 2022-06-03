@@ -43,7 +43,20 @@ const prisma = new PrismaClient();
       },
     });
 
+    const estudiante1 = await prisma.estudiante.upsert({
+      where: { name: 'estudiante1' },
+      update: {},
+      create: {
+        name: 'estudiante1',
+				lang: 'lang1',
+				missionCommander: 'Comander1',
+        enrollments:1,
+        hasCertification:true
+      },
+    });
+
     console.log('Create 3 explorers');
+    console.log('Create one student');
   } catch(e) {
     console.error(e);
     process.exit(1);
