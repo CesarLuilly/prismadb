@@ -258,8 +258,63 @@ model Estudiante {
     res.json(estudiante);
   });
   ```
-  
+
   - Crea un endpoint GET para regresar el registro dado el ID
   - Crea un endpoint POST para crear un nuevo registro
   - Crea un endpoint PUT para actualizar un registro
   - Crea un endpoint DELETE para eliminar un registro
+
+  # Prepara tu server para tenerlos listo para su consumo.
+
+  1. Instalamos `npm install cors --save`
+
+
+  Dado que permitiremos que una app consuma nuestra API, a través del CORS vamos a poder habilitar: https://developer.mozilla.org/es/docs/Web/HTTP/CORS
+
+  2. Nuestra app cliente estará en la siguiente URL: http://localhost:8081. Agrega lo siguiente en el server.js:
+  
+  ![connectionClient](./imgReadme/connectionClient.jpg)
+
+  3. Corre tu app: node server.js.
+
+  # Corre tu cliente
+
+  1. Ve al siguiente repositorio. [RepoCliente](https://github.com/CesarLuilly/clientForConsumeApiPrismaDB)
+
+  2. Descargar las dependencias con `npm install`
+
+  3. Ejecuta tu app con el comando: `npm run serve`, con esto podrás entrar a la url: `http://localhost:8081/`
+
+  4. Esta es una app de Vue JS ya creada para conectarse a tu api.
+
+  ![corridaCliente](./imgReadme/corridaClient.jpg)
+
+# Actividad Pendiente por realizar 07/06/2022
+
+1. Revisa la app del front, es una app de Vue 3
+2. La dependencia `Axios` nos permite realizar las peticiones HTTP al server, investiga cómo funciona. Lee el archivo `src/http-common.js`.
+3. Ve al archivo `src/services/ExplorerService.js`
+4. En la carpeta `components` están los componentes usados de Vue: template y script.
+5. Realiza un diagrama de cómo funciona este proyecto de Vue JS, incluye cómo funciona el `router.js`, los templates, los services y los componentes. 
+6. Este diagrama te servirá más adelante para comenzar a agregar nuevos features en este proyecto. Esta actividad tiene por propósito leer una app legada de frontend.
+7. Incluye estos diagramas en tu fork. 
+
+# Nuevo Feature Fullstack
+
+`missionCommander`
+| Campo | Tipo |
+|---|---|
+| id | Integer (autogenerado) |
+| name | String |
+| username | String |
+| mainStack | String |
+| currentEnrollment | Boolean |
+| hasAzureCertification | Boolean |
+
+1. Crea la tabla nueva anterior. Agrega unos registros por medio de los seeds.
+2. Crea un CRUD expuesto en un API en el `server.js` (métodos GET, POST, PUT, DELETE, recuerda que el método GET deberá tener 2 endpoints, uno para traer todos los registros y otro para consultar solo el registro por ID).
+3. En la pantalla inicial del front, consulta todos los registros en esta tabla y muéstralos. Tú decides el diseño.
+4. Agrega la posibilidad de agregar uno nuevo.
+5. Agrega la posibilidad de editar el `mainStack`.
+6. Agrega la posibilidad de eliminar el registro.
+
